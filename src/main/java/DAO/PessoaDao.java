@@ -11,7 +11,7 @@ public class PessoaDao {
 
     // CREATE
     public void inserir(Pessoa pessoa) {
-        String sql = "INSERT INTO pessoa (nome, email) VALUES (?, ?)";
+        String sql = "INSERT INTO pessoas (nome, email) VALUES (?, ?)";
         try {
             Connection conn = Conexao.getConexao();
             PreparedStatement stmt = conn.prepareStatement(sql);
@@ -32,7 +32,7 @@ public class PessoaDao {
     // GET ALL
     public List<Pessoa> listarTodas() {
         List<Pessoa> pessoas = new ArrayList<>();
-        String sql = "SELECT * FROM pessoa";
+        String sql = "SELECT * FROM pessoas";
         try {
 
             Connection conn = Conexao.getConexao();
@@ -51,7 +51,7 @@ public class PessoaDao {
 
     // GET ONE
     public Pessoa buscarPorId(int id) {
-        String sql = "SELECT * FROM pessoa WHERE id = ?";
+        String sql = "SELECT * FROM pessoas WHERE id = ?";
         try {
 
             Connection conn = Conexao.getConexao();
@@ -71,7 +71,7 @@ public class PessoaDao {
 
     // UPDATE
     public void atualizar(int id, Pessoa pessoa) {
-        String sql = "UPDATE pessoa SET nome = ?, email = ? WHERE id = ?";
+        String sql = "UPDATE pessoas SET nome = ?, email = ? WHERE id = ?";
         try {
 
             Connection conn = Conexao.getConexao();
@@ -92,7 +92,7 @@ public class PessoaDao {
 
     // DELETE
     public void deletar(int id) {
-        String sql = "DELETE FROM pessoa WHERE id = ?";
+        String sql = "DELETE FROM pessoas WHERE id = ?";
         try {
 
             Connection conn = Conexao.getConexao();

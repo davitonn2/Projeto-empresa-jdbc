@@ -6,9 +6,9 @@ import java.sql.SQLException;
 public class Conexao {
 
     public static Connection getConexao() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/empresa";
+        String url = "jdbc:mysql://localhost:3306/corp_data";
         String usuario = "root"; // trocar caso necessario
-        String senha = "1234567"; // inserir senha
+        String senha = ""; // inserir senha
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
